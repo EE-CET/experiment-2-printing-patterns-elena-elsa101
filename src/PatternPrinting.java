@@ -6,18 +6,22 @@ public class PatternPrinting {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        // Horizontal line
+        // Horizontal line (no trailing space)
         for (int i = 0; i < n; i++) {
-            System.out.print("* ");
+            if (i == n - 1) {
+                System.out.print("*");
+            } else {
+                System.out.print("* ");
+            }
         }
 
-        // Move to next line
         System.out.println();
 
         // Vertical line
         for (int i = 0; i < n; i++) {
             System.out.println("*");
         }
+    }
+}
         
 
-}
